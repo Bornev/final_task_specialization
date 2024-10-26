@@ -1,0 +1,76 @@
+bornev@bornev-VirtualBox:~$ sudo mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.39-0ubuntu0.24.04.2 (Ubuntu)
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE Human_Friends;
+Query OK, 1 row affected (0,92 sec)
+
+mysql> USE Human_Friends;CREATE TABLE Pets (
+Database changed
+    ->     ID INT AUTO_INCREMENT PRIMARY KEY,
+    ->     Name VARCHAR(50),
+    ->     Type VARCHAR(50),
+    ->     BirthDate DATE,
+    ->     Commands TEXT
+    -> )CREATE TABLE PackAnimals (
+    ->     ID INT AUTO_INCREMENT PRIMARY KEY,
+    ->     Name VARCHAR(50),
+    ->     Type VARCHAR(50),
+    ->     BirthDate DATE,
+    ->     Commands TEXT
+    -> );
+mysql> CREATE TABLE PackAnimals (
+    ->     ID INT AUTO_INCREMENT PRIMARY KEY,
+    ->     Name VARCHAR(50),
+    ->     Type VARCHAR(50),
+    ->     BirthDate DATE,
+    ->     Commands TEXT
+    -> INSERT INTO PackAnimals (Name, Type, BirthDate, Commands) VALUES
+    -> ('Thunder', 'Horse', '2015-07-21', 'Trot, Canter, Gallop'),
+    -> ('Sandy', 'Camel', '2016-11-03', 'Walk, Carry Load'),
+    -> ('Eeyore', 'Donkey', '2017-09-18', 'Walk, Carry Load, Bray'),
+    -> ('Storm', 'Horse', '2014-05-05', 'Trot, Canter'),
+    -> ('Dune', 'Camel', '2018-12-12', 'Walk, Sit'),e'),
+    -> ('Burro', 'Donkey', '2019-01-23', 'Walk, Bray, Kick'),
+    -> ('Blaze', 'Horse', '2016-02-29', 'Trot, Jump, Gallop'),,
+    -> ('Sahara', 'Camel', '2015-08-14', 'Walk, Run');'),
+Query OK, 8 rows affected (0,53 sec), 'Sit, Stay, Roll'),
+Records: 8  Duplicates: 0  Warnings: 0 'Meow, Scratch, Jump');
+Query OK, 8 rows affected (0,41 sec)
+
+mysql> DELETE FROM PackAnimals WHERE Type = 'Camel';
+Query OK, 6 rows affected (0,34 sec)
+
+mysql> CREATE TABLE Combined_Animals AS
+    -> SELECT ID, Name, Type, BirthDate, Commands FROM PackAnimals WHERE Type IN ('Horse', 'Donkey');
+Query OK, 10 rows affected (3,62 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> CREATE TABLE Young_Animals AS
+    -> SELECT ID, Name, Type, BirthDate, Commands,
+    ->        TIMESTAMPDIFF(MONTH, BirthDate, CURDATE()) AS AgeMonths
+    -> FROM Pets
+    -> WHERE TIMESTAMPDIFF(YEAR, BirthDate, CURDATE()) BETWEEN 1 AND 3;
+Query OK, 2 rows affected (3,73 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> CREATE TABLE All_Animals AS
+    -> SELECT ID, Name, Type, BirthDate, Commands, 'Pets' AS Source
+    -> FROM Pets
+    -> UNION ALL
+    -> SELECT ID, Name, Type, BirthDate, Commands, 'PackAnimals' AS Source
+    -> FROM PackAnimals
+    -> WHERE Type IN ('Horse', 'Donkey');
+Query OK, 18 rows affected (3,54 sec)
+Records: 18  Duplicates: 0  Warnings: 0
+
+mysql>
