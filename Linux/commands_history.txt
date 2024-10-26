@@ -1,0 +1,36 @@
+ФИО: Бородулин Николай Евгеньевич  
+Дата сдачи: 26.10.2024  
+Номер группы: 6379
+
+ 1 cat > Pets.txt << EOF
+Cобаки
+Кошки
+Хомяки
+EOF
+[A
+ 2  cat Pets.txt
+ 3  cat > PackAnimals.txt << EOF
+Лошади
+Верблюды
+Ослы
+EOF
+
+ 4  cat PackAnimals.txt
+ 5  cat Pets.txt PackAnimals.txt > HumanFriends.txt
+ 6  cat HumanFriends.txt
+ 7  ls
+ 8  ll
+ 9  mkdir FinalAtt
+ 10  mv HumanFriends.txt FinalAtt/
+ 11  ls FinalAtt/
+ 12  sudo apt update
+ 13  sudo apt install software-properties-common
+ 14  sudo add-apt-repository 'deb http://repo.mysql.com/apt/ubuntu/ focal mysql-8.0'
+ 15  sudo apt update
+ 16  sudo apt install mysql-server
+ 17  sudo apt install mysql-client
+ 18  sudo apt-get install curl
+ 19  dpkg -l | grep curl
+ 20  sudo dpkg -r curl
+ 21  dpkg -l | grep curl
+ 22  history > commands_history.txt

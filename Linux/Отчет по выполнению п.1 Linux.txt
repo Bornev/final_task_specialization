@@ -1,0 +1,415 @@
+
+bornev@bornev-VirtualBox:~$ cat > Pets.txt << EOF
+> Cобаки
+> Кошки
+> Хомяки
+> EOF
+bornev@bornev-VirtualBox:~$ cat Pets.txt
+Cобаки
+Кошки
+Хомяки
+bornev@bornev-VirtualBox:~$ cat > PackAnimals.txt << EOF
+> Лошади
+> Верблюды
+> Ослы
+> EOF
+bornev@bornev-VirtualBox:~$ cat PackAnimals.txt
+Лошади
+Верблюды
+Ослы
+
+bornev@bornev-VirtualBox:~$ cat Pets.txt PackAnimals.txt > HumanFriends.txt
+bornev@bornev-VirtualBox:~$ cat HumanFriends.txt
+Собаки
+Кошки
+Хомяки
+Лошади
+Верблюды
+Ослы
+bornev@bornev-VirtualBox:~$ ls
+ compose                   docker-compose.yml                  PackAnimals.txt   test3        Изображения
+ compose.yaml              dz_8                                Pets.txt          test_8       Музыка
+ compose.yml               HumanFriends.txt                    project.yaml      testcp       Общедоступные
+ contener                  ip.rules                            seminar           testfolder  'Рабочий стол'
+ docker-compose-dev.yml    ip.rules22222222222222              shared            Видео        Шаблоны
+ docker-compose-lab.yml    ip.rules33333333                    snap              Документы
+ docker-compose-prod.yml   mysql-apt-config_0.8.32-1_all.deb   test              Загрузки
+bornev@bornev-VirtualBox:~$ ll
+итого 328
+drwxr-x--- 27 bornev bornev  4096 окт 26 11:56  ./
+drwxr-xr-x  6 root   root    4096 сен 12 23:28  ../
+-rw-------  1 bornev bornev 83846 сен 26 23:14  .bash_history
+-rw-r--r--  1 bornev bornev   220 мар 31  2024  .bash_logout
+-rw-r--r--  1 bornev bornev  3771 мар 31  2024  .bashrc
+drwx------ 12 bornev bornev  4096 авг 26 23:47  .cache/
+drwxrwxr-x  2 bornev bornev  4096 сен 11 22:26  compose/
+-rw-rw-r--  1 bornev bornev   802 сен 24 21:50  compose.yaml
+-rw-rw-r--  1 bornev bornev   216 сен 23 23:30  compose.yml
+drwx------ 15 bornev bornev  4096 сен  8 00:43  .config/
+drwxrwxr-x  2 bornev bornev  4096 сен  6 15:21  contener/
+drwx------  3 bornev bornev  4096 сен 15 23:54  .docker/
+-rw-rw-r--  1 bornev bornev   270 сен 24 22:38  docker-compose-dev.yml
+-rw-rw-r--  1 bornev bornev   200 сен 24 22:30  docker-compose-lab.yml
+-rw-rw-r--  1 bornev bornev   201 сен 24 22:53  docker-compose-prod.yml
+-rw-rw-r--  1 bornev bornev   802 сен 24 21:51  docker-compose.yml
+drwxrwxr-x  2 bornev bornev  4096 сен 15 00:12  dz_8/
+drwxr-xr-x  2 bornev bornev  4096 авг 26 23:47  .fontconfig/
+-rw-rw-r--  1 bornev bornev    76 окт 26 11:56  HumanFriends.txt
+-rw-rw-r--  1 bornev bornev  1732 сен 26 22:42  ip.rules
+-rw-rw-r--  1 bornev bornev  1732 сен 26 21:52  ip.rules22222222222222
+-rw-rw-r--  1 bornev bornev  1958 сен 26 22:41  ip.rules33333333
+-rw-------  1 bornev bornev    20 сен  5 22:07  .lesshst
+drwx------  4 bornev bornev  4096 авг 25 23:18  .local/
+-rwxrwx---  1 bornev bornev 18068 сен 15 00:21  mysql-apt-config_0.8.32-1_all.deb*
+-rw-rw-r--  1 bornev bornev    39 окт 26 11:55  PackAnimals.txt
+-rw-rw-r--  1 bornev bornev    37 окт 26 11:36  Pets.txt
+-rw-r--r--  1 bornev bornev   807 мар 31  2024  .profile
+-rw-rw-r--  1 bornev bornev   216 сен 23 23:30  project.yaml
+-rw-rw-r--  1 bornev bornev    66 сен 15 02:22  .selected_editor
+drwxrwxr-x  3 bornev bornev  4096 сен 15 23:54  seminar/
+drwxrwx---  1 root   vboxsf     0 сен 15 00:22  shared/
+drwx------  8 bornev bornev  4096 сен 11 22:37  snap/
+drwx------  2 bornev bornev  4096 авг 25 23:19  .ssh/
+-rw-r--r--  1 bornev bornev     0 авг 26 00:17  .sudo_as_admin_successful
+drwxrwxr-x  4 bornev bornev  4096 сен 12 23:04  test/
+drwxrwxr-x  3 bornev docker  4096 сен  8 00:09  test3/
+drwxr-xr-x  2 root   root    4096 сен 15 01:57  test_8/
+drwxrwxr-x  4 bornev bornev  4096 сен  6 13:10  testcp/
+drwxrwxr-x  5 bornev bornev  4096 сен  6 16:43  testfolder/
+-rw-r-----  1 bornev bornev     5 окт 26 10:33  .vboxclient-clipboard-tty2-control.pid
+-rw-r-----  1 bornev bornev     5 окт 26 10:33  .vboxclient-clipboard-tty2-service.pid
+-rw-r-----  1 bornev bornev     5 окт 26 10:33  .vboxclient-draganddrop-tty2-control.pid
+-rw-r-----  1 bornev bornev     5 окт 26 10:33  .vboxclient-draganddrop-tty2-service.pid
+-rw-r-----  1 bornev bornev     5 окт 26 10:33  .vboxclient-hostversion-tty2-control.pid
+-rw-r-----  1 bornev bornev     5 окт 26 10:33  .vboxclient-seamless-tty2-control.pid
+-rw-r-----  1 bornev bornev     5 окт 26 10:33  .vboxclient-seamless-tty2-service.pid
+-rw-r-----  1 bornev bornev     5 окт 26 10:33  .vboxclient-vmsvga-session-tty2-control.pid
+-rw-r-----  1 bornev bornev     5 окт 26 10:33  .vboxclient-vmsvga-session-tty2-service.pid
+-rw-------  1 bornev bornev  4671 сен 23 23:30  .viminfo
+drwxr-xr-x  2 bornev bornev  4096 авг 25 23:18  Видео/
+drwxr-xr-x  2 bornev bornev  4096 авг 25 23:18  Документы/
+drwxr-xr-x  2 bornev bornev  4096 авг 25 23:18  Загрузки/
+drwxr-xr-x  2 bornev bornev  4096 авг 25 23:18  Изображения/
+drwxr-xr-x  2 bornev bornev  4096 авг 25 23:18  Музыка/
+drwxr-xr-x  2 bornev bornev  4096 авг 25 23:18  Общедоступные/
+drwxr-xr-x  2 bornev bornev  4096 авг 25 23:18 'Рабочий стол'/
+drwxr-xr-x  2 bornev bornev  4096 авг 25 23:18  Шаблоны/
+bornev@bornev-VirtualBox:~$ mkdir FinalAtt
+bornev@bornev-VirtualBox:~$ mv HumanFriends.txt FinalAtt/
+bornev@bornev-VirtualBox:~$ ls FinalAtt/
+HumanFriends.txt
+bornev@bornev-VirtualBox:~$ sudo apt update
+[sudo] пароль для bornev:
+Сущ:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Сущ:2 https://download.virtualbox.org/virtualbox/debian jammy InRelease
+Сущ:3 http://archive.ubuntu.com/ubuntu noble InRelease
+Пол:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Сущ:5 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble InRelease
+Сущ:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Получено 126 kB за 3с (44,3 kB/s)
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово
+Может быть обновлено 166 пакетов. Запустите «apt list --upgradable» для их показа.
+bornev@bornev-VirtualBox:~$ sudo apt install software-properties-common
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово
+Уже установлен пакет software-properties-common самой новой версии (0.99.48).
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 166 пакетов не обновлено.
+bornev@bornev-VirtualBox:~$ sudo add-apt-repository 'deb http://repo.mysql.com/apt/ubuntu/ focal mysql-8.0'
+Репозиторий: 'deb http://repo.mysql.com/apt/ubuntu/ focal mysql-8.0'
+Описание:
+Archive for codename: focal components: mysql-8.0
+Дополнительные сведения: http://repo.mysql.com/apt/ubuntu/
+Добавление репозитория.
+Нажмите [ENTER] для продолжения или Ctrl-C для отмены.
+Добавление записи deb в /etc/apt/sources.list.d/archive_uri-http_repo_mysql_com_apt_ubuntu_-noble.list
+Добавление отключенной записи deb-src в /etc/apt/sources.list.d/archive_uri-http_repo_mysql_com_apt_ubuntu_-noble.list
+Сущ:1 https://download.virtualbox.org/virtualbox/debian jammy InRelease
+Пол:2 http://repo.mysql.com/apt/ubuntu focal InRelease [12,8 kB]
+Сущ:3 http://archive.ubuntu.com/ubuntu noble InRelease
+Сущ:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Сущ:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Сущ:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Сущ:7 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble InRelease
+Ошб:2 http://repo.mysql.com/apt/ubuntu focal InRelease
+  Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+Чтение списков пакетов… Готово
+W: Ошибка GPG: http://repo.mysql.com/apt/ubuntu focal InRelease: Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+E: Репозиторий «http://repo.mysql.com/apt/ubuntu focal InRelease» не подписан.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+bornev@bornev-VirtualBox:~$ sudo apt update
+Сущ:1 https://download.virtualbox.org/virtualbox/debian jammy InRelease
+Пол:2 http://repo.mysql.com/apt/ubuntu focal InRelease [12,8 kB]
+Сущ:3 http://security.ubuntu.com/ubuntu noble-security InRelease
+Сущ:4 http://archive.ubuntu.com/ubuntu noble InRelease
+Ошб:2 http://repo.mysql.com/apt/ubuntu focal InRelease
+  Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+Сущ:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Сущ:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Сущ:7 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble InRelease
+Чтение списков пакетов… Готово
+W: Ошибка GPG: http://repo.mysql.com/apt/ubuntu focal InRelease: Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY B7B3B788A8D3785C
+E: Репозиторий «http://repo.mysql.com/apt/ubuntu focal InRelease» не подписан.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+bornev@bornev-VirtualBox:~$ sudo apt install mysql-server
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово
+Будут установлены следующие дополнительные пакеты:
+  libcgi-fast-perl libcgi-pm-perl libevent-core-2.1-7t64 libevent-pthreads-2.1-7t64 libfcgi-bin libfcgi-perl
+  libfcgi0t64 libhtml-template-perl libmecab2 libprotobuf-lite32t64 mecab-ipadic mecab-ipadic-utf8 mecab-utils
+  mysql-client-8.0 mysql-client-core-8.0 mysql-common mysql-server-8.0 mysql-server-core-8.0
+Предлагаемые пакеты:
+  libipc-sharedcache-perl mailx tinyca
+Следующие НОВЫЕ пакеты будут установлены:
+  libcgi-fast-perl libcgi-pm-perl libevent-core-2.1-7t64 libevent-pthreads-2.1-7t64 libfcgi-bin libfcgi-perl
+  libfcgi0t64 libhtml-template-perl libmecab2 libprotobuf-lite32t64 mecab-ipadic mecab-ipadic-utf8 mecab-utils
+  mysql-client-8.0 mysql-client-core-8.0 mysql-common mysql-server mysql-server-8.0 mysql-server-core-8.0
+Обновлено 0 пакетов, установлено 19 новых пакетов, для удаления отмечено 0 пакетов, и 166 пакетов не обновлено.
+Необходимо скачать 29,3 MB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 242 MB.
+Хотите продолжить? [Д/н] y
+Пол:1 http://archive.ubuntu.com/ubuntu noble/main amd64 mysql-common all 5.8+1.1.0build1 [6 746 B]
+Пол:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 mysql-client-core-8.0 amd64 8.0.39-0ubuntu0.24.04.2 [2 794 kB]
+Пол:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 mysql-client-8.0 amd64 8.0.39-0ubuntu0.24.04.2 [22,5 kB]
+Пол:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libevent-core-2.1-7t64 amd64 2.1.12-stable-9ubuntu2 [91,3 kB]
+Пол:5 http://archive.ubuntu.com/ubuntu noble/main amd64 libevent-pthreads-2.1-7t64 amd64 2.1.12-stable-9ubuntu2 [7 982 B]
+Пол:6 http://archive.ubuntu.com/ubuntu noble/main amd64 libmecab2 amd64 0.996-14ubuntu4 [201 kB]
+Пол:7 http://archive.ubuntu.com/ubuntu noble/main amd64 libprotobuf-lite32t64 amd64 3.21.12-8.2build1 [238 kB]
+Пол:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 mysql-server-core-8.0 amd64 8.0.39-0ubuntu0.24.04.2 [17,5 MB]
+Пол:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 mysql-server-8.0 amd64 8.0.39-0ubuntu0.24.04.2 [1 428 kB]
+Пол:10 http://archive.ubuntu.com/ubuntu noble/main amd64 libcgi-pm-perl all 4.63-1 [185 kB]
+Пол:11 http://archive.ubuntu.com/ubuntu noble/main amd64 libfcgi0t64 amd64 2.4.2-2.1build1 [26,8 kB]
+Пол:12 http://archive.ubuntu.com/ubuntu noble/main amd64 libfcgi-perl amd64 0.82+ds-3build2 [21,7 kB]
+Пол:13 http://archive.ubuntu.com/ubuntu noble/main amd64 libcgi-fast-perl all 1:2.17-1 [10,3 kB]
+Пол:14 http://archive.ubuntu.com/ubuntu noble/main amd64 libfcgi-bin amd64 2.4.2-2.1build1 [11,2 kB]
+Пол:15 http://archive.ubuntu.com/ubuntu noble/main amd64 libhtml-template-perl all 2.97-2 [60,2 kB]
+Пол:16 http://archive.ubuntu.com/ubuntu noble/main amd64 mecab-utils amd64 0.996-14ubuntu4 [4 804 B]
+Пол:17 http://archive.ubuntu.com/ubuntu noble/main amd64 mecab-ipadic all 2.7.0-20070801+main-3 [6 718 kB]
+Пол:18 http://archive.ubuntu.com/ubuntu noble/main amd64 mecab-ipadic-utf8 all 2.7.0-20070801+main-3 [4 384 B]
+Пол:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 mysql-server all 8.0.39-0ubuntu0.24.04.2 [9 520 B]
+Получено 29,3 MB за 7с (4 132 kB/s)
+Предварительная настройка пакетов …
+Выбор ранее не выбранного пакета mysql-common.
+(Чтение базы данных … на данный момент установлено 212580 файлов и каталогов.)
+Подготовка к распаковке …/0-mysql-common_5.8+1.1.0build1_all.deb …
+Распаковывается mysql-common (5.8+1.1.0build1) …
+Выбор ранее не выбранного пакета mysql-client-core-8.0.
+Подготовка к распаковке …/1-mysql-client-core-8.0_8.0.39-0ubuntu0.24.04.2_amd64.deb …
+Распаковывается mysql-client-core-8.0 (8.0.39-0ubuntu0.24.04.2) …
+Выбор ранее не выбранного пакета mysql-client-8.0.
+Подготовка к распаковке …/2-mysql-client-8.0_8.0.39-0ubuntu0.24.04.2_amd64.deb …
+Распаковывается mysql-client-8.0 (8.0.39-0ubuntu0.24.04.2) …
+Выбор ранее не выбранного пакета libevent-core-2.1-7t64:amd64.
+Подготовка к распаковке …/3-libevent-core-2.1-7t64_2.1.12-stable-9ubuntu2_amd64.deb …
+Распаковывается libevent-core-2.1-7t64:amd64 (2.1.12-stable-9ubuntu2) …
+Выбор ранее не выбранного пакета libevent-pthreads-2.1-7t64:amd64.
+Подготовка к распаковке …/4-libevent-pthreads-2.1-7t64_2.1.12-stable-9ubuntu2_amd64.deb …
+Распаковывается libevent-pthreads-2.1-7t64:amd64 (2.1.12-stable-9ubuntu2) …
+Выбор ранее не выбранного пакета libmecab2:amd64.
+Подготовка к распаковке …/5-libmecab2_0.996-14ubuntu4_amd64.deb …
+Распаковывается libmecab2:amd64 (0.996-14ubuntu4) …
+Выбор ранее не выбранного пакета libprotobuf-lite32t64:amd64.
+Подготовка к распаковке …/6-libprotobuf-lite32t64_3.21.12-8.2build1_amd64.deb …
+Распаковывается libprotobuf-lite32t64:amd64 (3.21.12-8.2build1) …
+Выбор ранее не выбранного пакета mysql-server-core-8.0.
+Подготовка к распаковке …/7-mysql-server-core-8.0_8.0.39-0ubuntu0.24.04.2_amd64.deb …
+Распаковывается mysql-server-core-8.0 (8.0.39-0ubuntu0.24.04.2) …
+Настраивается пакет mysql-common (5.8+1.1.0build1) …
+Устанавливается новая версия файла настройки /etc/mysql/conf.d/mysql.cnf …
+Устанавливается новая версия файла настройки /etc/mysql/my.cnf.fallback …
+Выбор ранее не выбранного пакета mysql-server-8.0.
+(Чтение базы данных … на данный момент установлено 212800 файлов и каталогов.)
+Подготовка к распаковке …/00-mysql-server-8.0_8.0.39-0ubuntu0.24.04.2_amd64.deb …
+Распаковывается mysql-server-8.0 (8.0.39-0ubuntu0.24.04.2) …
+Выбор ранее не выбранного пакета libcgi-pm-perl.
+Подготовка к распаковке …/01-libcgi-pm-perl_4.63-1_all.deb …
+Распаковывается libcgi-pm-perl (4.63-1) …
+Выбор ранее не выбранного пакета libfcgi0t64:amd64.
+Подготовка к распаковке …/02-libfcgi0t64_2.4.2-2.1build1_amd64.deb …
+Распаковывается libfcgi0t64:amd64 (2.4.2-2.1build1) …
+Выбор ранее не выбранного пакета libfcgi-perl.
+Подготовка к распаковке …/03-libfcgi-perl_0.82+ds-3build2_amd64.deb …
+Распаковывается libfcgi-perl (0.82+ds-3build2) …
+Выбор ранее не выбранного пакета libcgi-fast-perl.
+Подготовка к распаковке …/04-libcgi-fast-perl_1%3a2.17-1_all.deb …
+Распаковывается libcgi-fast-perl (1:2.17-1) …
+Выбор ранее не выбранного пакета libfcgi-bin.
+Подготовка к распаковке …/05-libfcgi-bin_2.4.2-2.1build1_amd64.deb …
+Распаковывается libfcgi-bin (2.4.2-2.1build1) …
+Выбор ранее не выбранного пакета libhtml-template-perl.
+Подготовка к распаковке …/06-libhtml-template-perl_2.97-2_all.deb …
+Распаковывается libhtml-template-perl (2.97-2) …
+Выбор ранее не выбранного пакета mecab-utils.
+Подготовка к распаковке …/07-mecab-utils_0.996-14ubuntu4_amd64.deb …
+Распаковывается mecab-utils (0.996-14ubuntu4) …
+Выбор ранее не выбранного пакета mecab-ipadic.
+Подготовка к распаковке …/08-mecab-ipadic_2.7.0-20070801+main-3_all.deb …
+Распаковывается mecab-ipadic (2.7.0-20070801+main-3) …
+Выбор ранее не выбранного пакета mecab-ipadic-utf8.
+Подготовка к распаковке …/09-mecab-ipadic-utf8_2.7.0-20070801+main-3_all.deb …
+Распаковывается mecab-ipadic-utf8 (2.7.0-20070801+main-3) …
+Выбор ранее не выбранного пакета mysql-server.
+Подготовка к распаковке …/10-mysql-server_8.0.39-0ubuntu0.24.04.2_all.deb …
+Распаковывается mysql-server (8.0.39-0ubuntu0.24.04.2) …
+Настраивается пакет libprotobuf-lite32t64:amd64 (3.21.12-8.2build1) …
+Настраивается пакет libmecab2:amd64 (0.996-14ubuntu4) …
+Настраивается пакет mysql-client-core-8.0 (8.0.39-0ubuntu0.24.04.2) …
+Настраивается пакет libfcgi0t64:amd64 (2.4.2-2.1build1) …
+Настраивается пакет libcgi-pm-perl (4.63-1) …
+Настраивается пакет libfcgi-bin (2.4.2-2.1build1) …
+Настраивается пакет libhtml-template-perl (2.97-2) …
+Настраивается пакет mecab-utils (0.996-14ubuntu4) …
+Настраивается пакет mysql-client-8.0 (8.0.39-0ubuntu0.24.04.2) …
+Настраивается пакет libfcgi-perl (0.82+ds-3build2) …
+Настраивается пакет libevent-core-2.1-7t64:amd64 (2.1.12-stable-9ubuntu2) …
+Настраивается пакет mecab-ipadic (2.7.0-20070801+main-3) …
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################|
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+emitting double-array: 100% |###########################################|
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################|
+
+done!
+update-alternatives: используется /var/lib/mecab/dic/ipadic для предоставления /var/lib/mecab/dic/debian (mecab-dictionary) в автоматическом режиме
+Настраивается пакет libcgi-fast-perl (1:2.17-1) …
+Настраивается пакет libevent-pthreads-2.1-7t64:amd64 (2.1.12-stable-9ubuntu2) …
+Настраивается пакет mysql-server-core-8.0 (8.0.39-0ubuntu0.24.04.2) …
+Настраивается пакет mecab-ipadic-utf8 (2.7.0-20070801+main-3) …
+Compiling IPA dictionary for Mecab.  This takes long time...
+reading /usr/share/mecab/dic/ipadic/unk.def ... 40
+emitting double-array: 100% |###########################################|
+/usr/share/mecab/dic/ipadic/model.def is not found. skipped.
+reading /usr/share/mecab/dic/ipadic/Noun.number.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Filler.csv ... 19
+reading /usr/share/mecab/dic/ipadic/Noun.place.csv ... 72999
+reading /usr/share/mecab/dic/ipadic/Noun.csv ... 60477
+reading /usr/share/mecab/dic/ipadic/Postp.csv ... 146
+reading /usr/share/mecab/dic/ipadic/Noun.verbal.csv ... 12146
+reading /usr/share/mecab/dic/ipadic/Verb.csv ... 130750
+reading /usr/share/mecab/dic/ipadic/Noun.demonst.csv ... 120
+reading /usr/share/mecab/dic/ipadic/Adnominal.csv ... 135
+reading /usr/share/mecab/dic/ipadic/Conjunction.csv ... 171
+reading /usr/share/mecab/dic/ipadic/Prefix.csv ... 221
+reading /usr/share/mecab/dic/ipadic/Noun.others.csv ... 151
+reading /usr/share/mecab/dic/ipadic/Noun.adjv.csv ... 3328
+reading /usr/share/mecab/dic/ipadic/Noun.name.csv ... 34202
+reading /usr/share/mecab/dic/ipadic/Noun.org.csv ... 16668
+reading /usr/share/mecab/dic/ipadic/Noun.proper.csv ... 27328
+reading /usr/share/mecab/dic/ipadic/Others.csv ... 2
+reading /usr/share/mecab/dic/ipadic/Adverb.csv ... 3032
+reading /usr/share/mecab/dic/ipadic/Suffix.csv ... 1393
+reading /usr/share/mecab/dic/ipadic/Interjection.csv ... 252
+reading /usr/share/mecab/dic/ipadic/Auxil.csv ... 199
+reading /usr/share/mecab/dic/ipadic/Noun.adverbal.csv ... 795
+reading /usr/share/mecab/dic/ipadic/Noun.nai.csv ... 42
+reading /usr/share/mecab/dic/ipadic/Symbol.csv ... 208
+reading /usr/share/mecab/dic/ipadic/Postp-col.csv ... 91
+reading /usr/share/mecab/dic/ipadic/Adj.csv ... 27210
+emitting double-array: 100% |###########################################|
+reading /usr/share/mecab/dic/ipadic/matrix.def ... 1316x1316
+emitting matrix      : 100% |###########################################|
+
+done!
+update-alternatives: используется /var/lib/mecab/dic/ipadic-utf8 для предоставления /var/lib/mecab/dic/debian (mecab-dictionary) в автоматическом режиме
+Настраивается пакет mysql-server-8.0 (8.0.39-0ubuntu0.24.04.2) …
+update-alternatives: используется /etc/mysql/mysql.cnf для предоставления /etc/mysql/my.cnf (my.cnf) в автоматическом режиме
+Renaming removed key_buffer and myisam-recover options (if present)
+mysqld will log errors to /var/log/mysql/error.log
+mysqld is running as pid 28353
+Created symlink /etc/systemd/system/multi-user.target.wants/mysql.service → /usr/lib/systemd/system/mysql.service.
+Настраивается пакет mysql-server (8.0.39-0ubuntu0.24.04.2) …##################################################....]
+Обрабатываются триггеры для man-db (2.12.0-4build2) …###########################################################..]
+Обрабатываются триггеры для libc-bin (2.39-0ubuntu8.3) …
+bornev@bornev-VirtualBox:~$ sudo apt install mysql-client
+[sudo] пароль для bornev:
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово
+Следующие НОВЫЕ пакеты будут установлены:
+  mysql-client
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 166 пакетов не обновлено.
+Необходимо скачать 9 412 B архивов.
+После данной операции объём занятого дискового пространства возрастёт на 41,0 kB.
+Пол:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 mysql-client all 8.0.39-0ubuntu0.24.04.2 [9 412 B]
+Получено 9 412 B за 1с (13,3 kB/s)
+Выбор ранее не выбранного пакета mysql-client.
+(Чтение базы данных … на данный момент установлено 212968 файлов и каталогов.)
+Ход выполнения: [  0%] [..........................................................................................]
+Распаковывается mysql-client (8.0.39-0ubuntu0.24.04.2) …..........................................................]
+Настраивается пакет mysql-client (8.0.39-0ubuntu0.24.04.2) …......................................................]
+bornev@bornev-VirtualBox:~$ sudo apt-get install curl
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово
+Будут установлены следующие дополнительные пакеты:
+  libcurl3t64-gnutls libcurl4t64
+Следующие пакеты будут обновлены:
+  curl libcurl3t64-gnutls libcurl4t64
+Обновлено 3 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 163 пакетов не обновлено.
+Необходимо скачать 900 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 0 B.
+Хотите продолжить? [Д/н] y
+Пол:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.4 [227 kB]
+Пол:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.4 [341 kB]
+Пол:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl3t64-gnutls amd64 8.5.0-2ubuntu10.4 [333 kB]
+Получено 900 kB за 3с (276 kB/s)
+(Чтение базы данных … на данный момент установлен 212971 файл и каталог.)
+Подготовка к распаковке …/curl_8.5.0-2ubuntu10.4_amd64.deb …
+Распаковывается curl (8.5.0-2ubuntu10.4) на замену (8.5.0-2ubuntu10.3) …
+Подготовка к распаковке …/libcurl4t64_8.5.0-2ubuntu10.4_amd64.deb …
+Распаковывается libcurl4t64:amd64 (8.5.0-2ubuntu10.4) на замену (8.5.0-2ubuntu10.3) …
+Подготовка к распаковке …/libcurl3t64-gnutls_8.5.0-2ubuntu10.4_amd64.deb …
+Распаковывается libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.4) на замену (8.5.0-2ubuntu10.3) …
+Настраивается пакет libcurl4t64:amd64 (8.5.0-2ubuntu10.4) …
+Настраивается пакет libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.4) …
+Настраивается пакет curl (8.5.0-2ubuntu10.4) …
+Обрабатываются триггеры для man-db (2.12.0-4build2) …
+Обрабатываются триггеры для libc-bin (2.39-0ubuntu8.3) …
+bornev@bornev-VirtualBox:~$ dpkg -l | grep curl
+ii  curl                                          8.5.0-2ubuntu10.4                        amd64        command line tool for transferring data with URL syntax
+ii  libcurl3t64-gnutls:amd64                      8.5.0-2ubuntu10.4                        amd64        easy-to-use client-side URL transfer library (GnuTLS flavour)
+ii  libcurl4t64:amd64                             8.5.0-2ubuntu10.4                        amd64        easy-to-use client-side URL transfer library (OpenSSL flavour)
+bornev@bornev-VirtualBox:~$ sudo dpkg -r curl
+(Чтение базы данных … на данный момент установлен 212971 файл и каталог.)
+Удаляется curl (8.5.0-2ubuntu10.4) …
+Обрабатываются триггеры для man-db (2.12.0-4build2) …
+bornev@bornev-VirtualBox:~$ dpkg -l | grep curl
+ii  libcurl3t64-gnutls:amd64                      8.5.0-2ubuntu10.4                        amd64        easy-to-use client-side URL transfer library (GnuTLS flavour)
+ii  libcurl4t64:amd64                             8.5.0-2ubuntu10.4                        amd64        easy-to-use client-side URL transfer library (OpenSSL flavour)
+bornev@bornev-VirtualBox:~$ history > commands_history.txt
+bornev@bornev-VirtualBox:~$ cat commands_history.txt
+
+
